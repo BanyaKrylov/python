@@ -1,0 +1,11 @@
+import json
+import difflib
+
+test_lines = open("test.txt").readlines()
+correct_lines = open("correct.txt").readlines()
+
+d = difflib.Differ()
+
+diff = d.compare(correct_lines, test_lines)
+
+print '\n'.join(diff)
